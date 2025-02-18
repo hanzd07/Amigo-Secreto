@@ -25,3 +25,14 @@ function mostrarAmigos() {
         listaAmigos.appendChild(li);
     });
 }
+//Sorteo de amigo secreto
+function sortearAmigo() {
+    if (amigos.length > 0) {
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoSecreto = amigos[indiceAleatorio];
+
+        resultado.innerHTML = `<li>El amigo secreto es: ${amigoSecreto}</li>`;
+    } else {
+        alert("La lista de amigos está vacía. Por favor, agregue nombres antes de realizar el sorteo.");
+    }
+}
